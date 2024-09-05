@@ -1,0 +1,69 @@
+---
+permalink: configure/add-vcenter.html 
+sidebar: sidebar 
+keywords:  
+summary: vCenter Serverインスタンスは、ホスト、仮想マシン（VM）、ストレージバックエンドを制御できる一元管理プラットフォームです。 
+---
+= vCenter Serverインスタンスの追加と管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vCenter Serverは、ホスト、仮想マシン（VM）、およびストレージバックエンドを制御できる一元管理プラットフォームを提供します。
+
+
+
+== vCenter Serverインスタンスを追加する
+
+* このタスクについて *
+
+ONTAP tools for VMware vSphereの1つのインスタンスを使用して、複数のvCenter Serverインスタンスを追加および管理できます。
+
+* 手順 *
+
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalanceIP:8443/virtualization/ui/`
+. 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
+. サイドバーから* vCenters *を選択します。
+. vCenter Serverインスタンスをオンボードするには*[追加]*を選択し、vCenterのIPアドレス/ホスト名、ユーザ名、パスワード、およびポートの詳細を指定します。
+
+
+vCenter ServerインスタンスをONTAP toolsに追加すると、次の処理が自動的に実行されます。
+
+* vCenter Client Plug-inが登録されている
+* プラグインとAPIのカスタム権限がvCenter Serverインスタンスにプッシュされる
+* ユーザを管理するためのカスタムロールが作成されます。
+
+
+
+
+== ONTAP Tools for VMware vSphereプラグインをvCenter Serverインスタンスに登録
+
+vCenter Serverインスタンスを追加すると、ONTAP tools for VMware vSphereプラグインがリモートプラグインとしてvCenter Serverに自動的に登録されます。プラグインは、vSphereユーザインターフェイスのショートカットに表示されます。
+
+プラグインは、vCenter Serverインスタンスへのキー_com.netapp.otv_で登録され、vCenter ServerインスタンスのExtensionManagerで確認できます。
+
+
+
+== ONTAP Tools for VMware vSphereプラグインの登録解除
+
+vCenter ServerインスタンスからONTAP tools for VMware vSphere Plug-inの登録を解除するには、次の手順を実行します。
+
+* 手順 *
+
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalanceIP:8443/virtualization/ui/`
+. 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
+. サイドバーから[vCenters]を選択します。
+. 削除するvCenterの縦の省略記号をクリックし、*[削除]*オプションを選択します。
++
+
+NOTE: ストレージマッピングが接続されているvCenter Serverインスタンスは削除できません。vCenter Serverインスタンスを削除する前に、マッピングを削除する必要があります。
+
+
+
+ONTAP toolsでvCenter Serverインスタンスを削除すると、次の処理が自動的に実行されます。
+
+* プラグインの登録が解除されました。
+* プラグイン権限とプラグインロールが削除されました。
+

@@ -1,0 +1,19 @@
+---
+permalink: automation/overview-rest-apis.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: REST APIを使用してONTAP Tools for VMware vSphereの管理処理をいくつか実行する方法について説明します。REST APIはSwagger Webページから利用できます。 
+---
+= REST APIの概要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST APIを使用して、VMware vSphereの管理処理用のONTAPツールをいくつか実行できます。REST APIはSwagger Webページから利用できます。
+
+APIドキュメントを表示したり、呼び出しを手動で問題したりするには、_\https://loadbalancerIP:8443/_にあるSwagger Webページにアクセスします。
+
+
+NOTE: すべてのAPIには、要求の本文と、swaggerページに記載されている例があります。このセクションに記載されているワークフローと例は、参照のみを目的としています。

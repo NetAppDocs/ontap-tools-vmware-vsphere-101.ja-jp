@@ -1,0 +1,54 @@
+---
+permalink: automation/how-to-access-rest-api.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: ONTAP REST API には、いくつかの方法でアクセスできます。 
+---
+= ONTAP tools for VMware vSphere REST APIにアクセスする方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP REST API には、いくつかの方法でアクセスできます。
+
+
+
+== ネットワークに関する考慮事項
+
+REST API には、次のインターフェイスを通じて接続できます。
+
+* クラスタ管理LIF
+* ノード管理LIF
+* SVM 管理 LIF
+
+
+使用するLIFは、HTTPS管理プロトコルをサポートするように設定する必要があります。また、ネットワークのファイアウォール設定でHTTPSトラフィックを許可する必要があります。
+
+
+NOTE: 必ずクラスタ管理LIFを使用してください。これにより、API要求の負荷がすべてのノードに分散され、オフラインになっているノードや接続の問題が発生しているノードを回避できます。複数のクラスタ管理LIFが設定されている場合は、REST APIへのアクセスに関してすべて同じです。
+
+
+
+== ONTAP Tools for VMware vSphere APIオンラインドキュメントページ
+
+Swaggerには、NetApp ONTAP tools for VMware vSphereプラグインのサポートページにあるハイパーリンクからアクセスできます。
+
+最新バージョンの API のドキュメントページにアクセスするための URL の形式は次のとおりです。
+
+'https://<loadbalancer_ip_address>/docs/api'
+
+
+
+== カスタムのソフトウェアとツール
+
+ONTAP Tools for VMware vSphere APIには、さまざまなプログラミング言語やツールを使用してアクセスできます。代表的なものとしては、 Python 、 Java 、 Curl 、 PowerShell などがあります。API を使用するプログラム、スクリプト、またはツールは、 REST Web サービスのクライアントとして機能します。プログラミング言語を使用すると、APIについての理解が深まり、ONTAP Tools for VMware vSphereの管理を自動化することができます。
+
+最新バージョンの API に直接アクセスするためのベース URL の形式は次のとおりです。
+
+'https：//<loadbalancer_ip_address>/api'
+
+複数のバージョンがサポートされている場合に特定のバージョンの API にアクセスするには、次の形式の URL を使用します。
+
+'https：//<loadbalancer_ip_address>/api/v1'

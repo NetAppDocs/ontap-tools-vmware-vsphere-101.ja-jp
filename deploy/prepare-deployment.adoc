@@ -1,0 +1,55 @@
+---
+permalink: deploy/prepare-deployment.html 
+sidebar: sidebar 
+keywords:  
+summary: アプライアンスを使用するには、ONTAP tools for VMware vSphereを環境に導入し、必要なパラメータを指定する必要があります。 
+---
+= ONTAP Tools for VMware vSphereの導入準備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphereの導入を開始する前に、ストレージバックエンドの基本要件、アプリケーション要件、およびライセンス要件を確認しておく必要があります。事前に導入計画を立て、環境でONTAP tools for VMware vSphereをどのように設定するかを決めておきます。
+
+
+
+== 導入の準備
+
+導入を進める前のONTAP Tools for VMware vSphereの要件は次のとおりです。
+
+. vCenter Server 環境を設定およびセットアップします。
+. _.ova_ファイルをダウンロードします。
+. （任意）NetAppが提供するPostmanコレクションJSONファイルを自動化ユーザ収集するために使用します。
+. OVAを導入するための親vCenter Serverのクレデンシャル。vCenter Serverの親のパスワードに次の特殊文字を使用することはできません（$、'、"）。
+. OVAを導入するホストまたはリソースプールに、link:../deploy/sizing-requirements.html["ONTAP Tools for VMware vSphereを導入するための前提条件"]セクションに記載されている最小限のリソースがあることを確認します。
+. 導入後にONTAP tools for VMware vSphereが登録用に接続するvCenter Serverインスタンスのログインクレデンシャル。
+. ブラウザキャッシュを削除します。
+. 非HA環境では、3つの空きIPアドレスが必要です。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。ホスト名は、割り当てる前にDNSの空きIPアドレスにマッピングする必要があります。5つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。
+. アップロードしたコンテンツライブラリテンプレートは、再起動時に使用されるため、展開後に削除しないでください。
+. vCenterが複数ある環境でカスタムCA証明書が必須である場合は、証明書を発行するドメイン名を仮想IPアドレスにマッピングします。ドメイン名に対して_nslookup_checkを実行して、ドメインが目的のIPアドレスに解決されているかどうかを確認します。証明書は、ロードバランサのIPアドレスのドメイン名とIPアドレスを使用して作成する必要があります。
+. IPv4/IPv6対応VLAN -ピュアIPv6はサポートされていません。mixedモードは、IPv6とIPv4の両方のアドレスを持つVLANでサポートされます。
+. 時刻の同期用にvCenter Serverに提供されるNTPサーバ。
+. 静的IPアドレスOVAを導入するノードまたはVMの設定の詳細（必須）およびその他の詳細。
++
+.. vCenter Serverのホスト名（OVAが導入されているvCenter）
+.. vCenter Serverのユーザ名（OVAが導入されているvCenter）
+.. vCenter Serverのパスワード（OVAが導入されているvCenter）
+.. リソースプール
+.. データLIF（IPv4 / IPv6）
+.. 管理LIF
+.. ONTAPユーザ名
+.. ONTAPパスワード
+.. SVM名
+.. プロトコル
+.. Kubernetesコントロールプレーンの仮想IPアドレス。
+.. [HA/non-HA]ドロップダウン
+.. ホスト名のリスト
+.. IPアドレス（文字列）
+.. コンテンツライブラリ名
+.. OVFテンプレート名
+.. IPv6ゲートウェイ（オプション）
+
+
+

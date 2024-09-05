@@ -1,0 +1,29 @@
+---
+permalink: automation/manage-network-workflows.html 
+sidebar: sidebar 
+keywords: REST API categories 
+summary: ネットワークアクセスの管理 
+---
+= ネットワークアクセスの管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次のAPIを使用して、ホワイトリストに追加するIPアドレスを指定します。
+
+[listing]
+----
+patch /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+
+{
+    value: string
+}
+
+GET /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+
+{
+    value: string
+}
+----

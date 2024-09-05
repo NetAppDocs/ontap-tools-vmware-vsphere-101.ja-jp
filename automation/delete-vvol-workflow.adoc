@@ -1,0 +1,53 @@
+---
+permalink: automation/delete-vvol-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: ワークフローは、特定の管理タスクまたは目標を達成するために必要な1つ以上の手順のシーケンスです。 
+---
+= vVolデータストアの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vVolデータストアは、データストアで使用可能なFlexVol volumeが少なくとも1つ存在していれば削除されません。HAクラスタでvVolデータストアを削除する場合は、まずHAクラスタ内のすべてのホストからデータストアをアンマウントしてから、vCenterサーバのユーザインターフェイスを使用して_.vsphere-ha_folderを手動で削除します。
+
+* 手順 *
+
+vVolデータストアを削除するには、次のAPIを使用します。
+
+[listing]
+----
+DELETE
+​/virtualization​/api​/v1​/vcenters​/{vcguid}​/vvols​/datastores​/{moref}
+----
+例
+
+* vVolデータストアの削除とストレージからのボリュームの削除
+
+
+[listing]
+----
+  DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=true
+----
+
+NOTE: vVolデータストアの削除ワークフローでは、datastore-volumeが管理されているかどうかに関係なく、delete_volumeフラグがtrueに設定されている場合、datastore-volumesが削除されます。
+
+* vVolデータストアを削除し、ストレージからボリュームは削除しない
+
+
+[listing]
+----
+  DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=false
+----
+応答：
+
+[listing]
+----
+{
+
+    "id": "1889"
+
+}
+----

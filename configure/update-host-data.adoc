@@ -1,0 +1,21 @@
+---
+permalink: configure/update-host-data.html 
+sidebar: sidebar 
+keywords:  
+summary: ESXiホストでオンデマンド検出を実行して、ストレージデータの最新の更新を取得できます。 
+---
+= ホストデータの更新
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ESXiホストでオンデマンド検出を実行して、ストレージデータの最新の更新を取得できます。
+
+* 手順 *
+
+. VMware vSphere Web Clientの[ホーム]ページで、*[ホストおよびクラスタ]*をクリックします。
+. ホストを右クリックし、* NetApp ONTAP tools *>*[ホストデータの更新]*を選択します。
+. [ホストデータの更新]*ポップアップウィンドウで*[はい]*を選択して、接続されているすべてのストレージシステムの検出を再開します。
+

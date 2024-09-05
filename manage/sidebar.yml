@@ -1,0 +1,68 @@
+---
+section: manage
+title: ONTAPツールの管理
+entries:
+- title: データストアの管理
+  entries:
+  - title: NFSデータストアとVMFSデータストアのマウント
+    url: "/manage/mount-datastores-on-host.html"
+  - title: vVolデータストアのマウント
+    url: "/manage/mount-a-vvols-datastore.html"
+  - title: NFSデータストアとVMFSデータストアのサイズ変更
+    url: "/manage/resize-datastores.html"
+  - title: VVolデータストアの拡張
+    url: "/manage/expand-storage-of-vvol-datastore.html"
+  - title: vVolデータストアの縮小
+    url: "/manage/remove-storage-from-a-vvols-datastore.html"
+  - title: データストアの削除
+    url: "/manage/delete-vvols.html"
+  - title: データストアのONTAPストレージビュー
+    url: "/manage/storage-view-datastore.html"
+  - title: 仮想マシンストレージビュー
+    url: "/manage/virtual-machine-storage-view-datastore.html"
+- title: ストレージしきい値の管理
+  url: "/manage/manage-storage-threshold.html"
+- title: ストレージバックエンドの管理
+  url: "/manage/storage-backend.html"
+- title: vCenter Serverインスタンスを管理します。
+  url: "/manage/manage-vcenter.html"
+- title: 証明書の管理
+  url: "/manage/certificate-manage.html"
+- title: igroupとエクスポートポリシーを管理します。
+  url: "/manage/igroup-management.html"
+- title: ONTAP Tools for VMware vSphereメンテナンスコンソールへのアクセス
+  entries:
+  - title: ONTAP Tools for VMware vSphereメンテナンスコンソールの概要
+    url: "/manage/maintenance-console.html"
+  - title: リモート診断アクセスの設定
+    url: "/manage/configure-remote-diagnostic-access.html"
+  - title: 他のノードでSSHを開始する
+    url: "/manage/start-the-ssh-on-other-nodes.html"
+  - title: vCenterとONTAPのクレデンシャルを更新する
+    url: "/manage/update-vcenter-credentials.html"
+- title: ONTAP Toolレポート
+  url: "/manage/reports.html"
+- title: ログファイルを収集する
+  url: "/manage/collect-the-log-files.html"
+- title: 仮想マシンの管理
+  entries:
+  - title: 仮想マシンの移行またはクローニングに関する考慮事項
+    url: "/manage/migrate-virtual-machines.html"
+  - title: NFSおよびVMFSデータストアを使用する仮想マシンをvVolデータストアに移行する
+    url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
+  - title: VASAのクリーンアップ
+    url: "/manage/delete-virtual-machines.html"
+- title: ESXiホストの設定を変更
+  url: "/manage/edit-esxi-host-settings.html"
+- title: パスワードを管理します
+  entries:
+  - title: ONTAP tools Managerのパスワードの変更
+    url: "/manage/change-manager-password.html"
+  - title: ONTAP tools Managerのパスワードのリセット
+    url: "/manage/reset-manager-password.html"
+  - title: アプリケーションユーザパスワードのリセット
+    url: "/manage/reset-app-password.html"
+  - title: メンテナンスコンソールのユーザパスワードのリセット
+    url: "/manage/reset-maint-password.html"
+- title: ボリュームをクリーンアップ
+  url: "/manage/delete-deployment.html"

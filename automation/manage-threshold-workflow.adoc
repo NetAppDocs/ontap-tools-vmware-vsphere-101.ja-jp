@@ -1,0 +1,48 @@
+---
+permalink: automation/manage-threshold-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: ワークフローは、特定の管理タスクまたは目標を達成するために必要な1つ以上の手順のシーケンスです。 
+---
+= ストレージしきい値の管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次のGETしきい値APIを使用して、ボリュームおよびアグリゲートに設定されているストレージしきい値の制限を取得します。
+
+[listing]
+----
+GET​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+例：vCenter GUIDによるvCenter Serverインスタンスごとのストレージしきい値の取得
+
+[listing]
+----
+GET "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+----
+次のパッチ設定アラームをボリュームとアグリゲートに対して使用して、設定したしきい値に達したときに通知を生成します。
+
+[listing]
+----
+PATCH​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+例：vCenter GUIDを使用してvCenterごとのストレージしきい値を更新します。デフォルトの制限は、「ほぼフル」が80%、「フル」が90%です。すべてのしきい値設定の変更
+
+[listing]
+----
+{{{}PATCH "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+Request Body
+{
+"volume":
+
+{ "nearly_full_percent": 80, "full_percent": 90 }
+,
+"aggregate": {
+"nearly_full_percent": 80,
+"full_percent": 90
+}
+}{}}}{}
+----

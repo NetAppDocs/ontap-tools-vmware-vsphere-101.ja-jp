@@ -1,0 +1,64 @@
+---
+permalink: automation/create-vvol-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: ワークフローは、特定の管理タスクまたは目標を達成するために必要な1つ以上の手順のシーケンスです。 
+---
+= vVolデータストアの作成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vVolデータストアは、新しいボリュームまたは既存のボリュームを使用して作成できます。既存のボリュームと新しいボリュームを組み合わせてvVolデータストアを作成することもできます。
+
+
+NOTE: ルートアグリゲートがSVMにマッピングされていないことを確認します。
+
+データストアを作成する前にJWTトークンを生成するか、vCenterで[Maximum Bearer Token Lifetime]を60mに設定してSAMLトークンの有効期限を延長します。
+
+APIにはx-authを渡す必要があります。このx-authは、SwaggerのAuthに追加された新しいAPIから生成できます。
+
+/virtualization/api/v1/auth/vcenter-login
+
+. 新しいボリュームでvVolデータストアを作成する。
+
+
+ONTAP REST APIを使用して、アグリゲートIDとストレージID（SVM UUID）を取得します。/virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vVols/datastores以降
+
+次のURIを使用してステータスを確認します。
+
++
+
+[listing]
+----
+`\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
+----
++ NFSデータストアのリクエスト本文
+
+｛"name"："nfsds1"、"protocol"："nfs" AFF、"platform_type"："smolef"："domain-c8"、"volumes"：[｛"is_existing"：false、"name"："vol_nfs_pvt"、"size_in_mb"：2048000、"space_efficiency
+
+iSCSIデータストアの要求本文：｛"name"："iscsi_custom"、"protocol" AFF："iscsi"、"platform_type"："domain-c8"、"volumes"：[｛"is_existing"：false、"name"："iscsi_custom"：8034、"space_efficiency"："thin"、"-custom"- b-b"-b"："-feid"：｛"-b""：5eid"：5ee"：｛"-feid"：5eid"：｛"-bree"：｛"-feid"：｛"-feid"：｛"-feid"：｛"-breeid"：｛"-breeid｝既存のボリュームを使用してvVolデータストアを作成する。
+
+ONTAP REST APIを使用してaggregate_idとvolume_idを取得します。
+
+ POST /virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores
+リクエスト本文
+
+....
+ {
+"name" : "nfsds2",
+"protocol" : "nfs",
+"platform_type": "aff",
+"moref" : "domain-c8",
+"volumes" : [
+    {
+          "is_existing": true,
+          "id": "e632a632-1412-11ee-8a8c-00a09860a3ff"
+        }
+],
+"storage_backend": {
+                    "storage_id": "33a8b6b3-10cd-11ee-8a8c-00a09860a3ff"    }
+....
+}

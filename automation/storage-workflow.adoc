@@ -1,0 +1,42 @@
+---
+permalink: automation/storage-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: ワークフローは、特定の管理タスクまたは目標を達成するために必要な1つ以上の手順のシーケンスです。 
+---
+= ストレージ検出
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+検出間隔は、コンフィギュレーションマップの一部として設定できます。スケジュールされた検出は60分ごとに実行されます。ここで指定するAPIは、ローカルスコープに追加された特定のストレージバックエンドに対してオンデマンドで検出を実行するためのものです。
+
+次のAPIを使用して検出を実行します。
+
+[listing]
+----
+POST
+/virtualization/api/v1/vcenters/{vcguid}/storage-backends/{id}/discovery-jobs
+----
+
+NOTE: オンボードストレージバックエンド（SVMまたはクラスタ）のワークフローを参照し、ストレージバックエンドAPIの応答からIDを取得してください。
+
+このAPIエンドポイントからの検出は、ローカルを対象としたストレージバックエンドでのみサポートされ、グローバルを対象としたストレージバックエンドではサポートされません。ストレージバックエンドのタイプがclusterの場合は、子SVMに対して暗黙的に検出が実行されます。ストレージバックエンドのタイプがSVMの場合、選択したSVMに対してのみ検出が実行されます。
+
+例：
+
+IDで指定したストレージバックエンドで検出を実行するには
+
+[listing]
+----
+POST
+/api/v1/vcenters/3fa85f64-5717-4562-b3fc-2c963f66afa6/storage-backends/74e85f64-5717-4562-b3fc-2c963f669dde/discovery-jobs
+----
+APIにはx-authを渡す必要があります。このx-authは、SwaggerのAuthに追加された新しいAPIから生成できます。
+
+[listing]
+----
+/virtualization/api/v1/auth/vcenter-login
+----

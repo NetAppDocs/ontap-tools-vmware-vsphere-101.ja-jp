@@ -1,0 +1,34 @@
+---
+permalink: configure/verify-registration.html 
+sidebar: sidebar 
+keywords:  
+summary: オンボードしたSVMがvCenter Client UIのVASA Providerの下に表示されていることを確認します。 
+---
+= 登録されたVASAプロバイダを確認
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+オンボードしたVASA Providerが、vCenter Client UIおよびリモートプラグインUIの[VASA Provider]の下に表示されていることを確認します。
+
+* 手順 *
+
+. vCenter Client UIからVASA Providerを確認するには、次の手順を実行します。
++
+.. vCenter Serverに移動します。
+.. 管理者のクレデンシャルでログインします。
+.. [ストレージプロバイダ]*を選択します。
+.. 「 * Configure * 」を選択します。
+.. [Storage Provider/storage backends]で、オンボードしたVASAプロバイダが正しく表示されていることを確認します。
+
+
+. リモートプラグインUIからVASA Providerを確認するには、次の手順を実行します。
++
+.. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+.. ショートカットページで、プラグインセクションの* NetApp ONTAP tools *をクリックします。
+.. 登録されているVASA Providerは、概要ページと*[設定]*>*[VASA Provider設定]*ページで確認できます。
+
+
+

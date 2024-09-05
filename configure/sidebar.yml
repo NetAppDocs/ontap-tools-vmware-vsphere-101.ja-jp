@@ -1,0 +1,36 @@
+---
+section: configure
+title: ONTAPツールの設定
+entries:
+- title: ONTAP tools Managerユーザインターフェイス
+  url: "/configure/manager-user-interface.html"
+- title: vCenter Serverの追加と管理
+  url: "/configure/add-vcenter.html"
+- title: VASA ProviderをvCenter Serverに登録
+  url: "/configure/registration-process.html"
+- title: 登録されたVASAプロバイダを確認
+  url: "/configure/verify-registration.html"
+- title: NFS VAAIプラグインをインストールする
+  url: "/configure/install-nfs-vaai-plug-in.html"
+- title: ホストデータの更新
+  url: "/configure/update-host-data.html"
+- title: ESXiホストの設定
+  entries:
+  - title: ESXiサーバのマルチパスとタイムアウトの設定
+    url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
+  - title: ESXiホストの値の設定
+    url: "/configure/esxi-host-values.html"
+- title: ストレージシステムとホストの検出
+  url: "/configure/discover-storage-systems-and-hosts.html"
+- title: ストレージバックエンドを追加します
+  url: "/configure/add-storage-backend.html"
+- title: ストレージバックエンドとvCenter Serverインスタンスの関連付け
+  url: "/configure/associate-storage-backend.html"
+- title: ネットワークアクセスの設定
+  url: "/configure/configure-network-access.html"
+- title: ONTAPユーザのロールと権限の設定
+  url: "/configure/configure-user-role-and-privileges.html"
+- title: NetApp ONTAP Tools for VMware vSphereプラグインダッシュボードの概要
+  url: "/configure/dashboard-overview.html"
+- title: データストアを作成
+  url: "/configure/create-vvols-datastore.html"

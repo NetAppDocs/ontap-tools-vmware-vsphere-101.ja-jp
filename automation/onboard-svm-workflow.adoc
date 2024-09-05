@@ -1,0 +1,34 @@
+---
+permalink: automation/onboard-svm-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: ワークフローは、特定の管理タスクまたは目標を達成するために必要な1つ以上の手順のシーケンスです。 
+---
+= vCenter Serverインスタンスを使用したオンボードストレージバックエンド（SVMまたはクラスタ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次のAPIを使用してストレージバックエンドをオンボードし、SVMをvCenterにローカルでマッピングします。link:../configure/configure-user-role-and-privileges.html["ONTAPユーザのロールと権限の設定"]ONTAP SVMユーザPrivilegesのセクションを参照してください。
+
+[listing]
+----
+POST /virtualization/api/v1/vcenters/<vcguid>/storage-backends
+
+{
+     "hostname_or_ip": "172.21.103.107",
+     "username": "svm11",
+     "password": "xxxxxx"
+   }
+----
+
+NOTE: 上記のAPI応答のIDは検出で使用されます。
+
+APIにはx-authを渡す必要があります。このx-authは、SwaggerのAuthに追加された新しいAPIから生成できます。
+
+[listing]
+----
+/virtualization/api/v1/auth/vcenter-login
+----

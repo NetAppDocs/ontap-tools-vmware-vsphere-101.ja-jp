@@ -1,0 +1,42 @@
+---
+permalink: protect/configure-on-srm-appliance.html 
+sidebar: sidebar 
+keywords:  
+summary: SRMアプライアンスを導入したら、SRMアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、ディザスタリカバリ管理のためにSRMアプライアンスがSRAと通信できるようになります。SRMアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereクレデンシャル\（IPアドレスと管理者パスワード\）をSRMアプライアンスに保存する必要があります。 
+---
+= SRMアプライアンスでSRAを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SRMアプライアンスを導入したら、SRMアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、ディザスタリカバリ管理のためにSRMアプライアンスがSRAと通信できるようになります。SRMアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereクレデンシャル（IPアドレス）をSRMアプライアンスに保存する必要があります。
+
+* 必要なもの *
+
+から_tar.gz_ファイルをダウンロードしておく必要があります https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetAppサポートサイト"]。
+
+* このタスクについて *
+
+SRMアプライアンスでSRAを設定すると、SRAクレデンシャルがSRMアプライアンスに保存されます。
+
+* 手順 *
+
+. SRMアプライアンスの画面で、*[Storage Replication Adapter]*>*[New Adapter]*をクリックします。
+. SRM に .tar.gz_file をアップロードします。
+. puttyを使用して、管理者アカウントでSRMアプライアンスにログインします。
+. 次のコマンドを使用してrootユーザに切り替えます。 `su root`
+. コマンドを実行し `cd /var/log/vmware/srm` てログディレクトリに移動します。
+. ログの場所で、コマンドを入力してSRAで使用されるDocker IDを取得します。 `docker ps -l`
+. コンテナIDにログインするには、次のコマンドを入力します。 `docker exec -it -u srm <container id> sh`
+. 次のコマンドを使用して、SRMにONTAP tools for VMware vSphereのIPアドレスとパスワードを設定します。 `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>'`
++
+
+NOTE: Perlスクリプトでパスワードの特殊文字が入力の区切り文字として読み取られないようにするには、パスワードの値を一重引用符で囲む必要があります。
+
+. アダプタを再スキャンして、SRMの[Storage Replication Adapters]ページで詳細が更新されたことを確認します。
++
+ストレージクレデンシャルが保存されたことを示すメッセージが表示されます。SRAは、指定されたIPアドレス、ポート、およびクレデンシャルを使用してSRAサーバと通信できます。
+
+

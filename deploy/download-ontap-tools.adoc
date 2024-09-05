@@ -1,0 +1,35 @@
+---
+permalink: deploy/download-ontap-tools.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware vSphere 用の ONTAP ツールの .ova ファイルは、NetApp Support Siteからダウンロードできます。 
+---
+= ONTAP Tools for VMware vSphereのダウンロード
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ `.zip`ONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名済み証明書を含むファイルは、からダウンロードできます https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetAppサポートサイト"^]。
+
+導入が完了すると、ONTAP Tools for VMware vSphereおよびVASA製品が環境にインストールされます。デフォルトでは、導入モデルを決定し、要件に基づいてVASA Providerを有効にするかどうかを選択すると、すぐにONTAP Tools for VMware vSphereが機能し始めます。詳細は、を参照してください link:../configure/registration-process.html["VASA ProviderをvCenter Serverインスタンスに登録する"] 。
+
+
+
+== コンテンツライブラリ
+
+VMwareのコンテンツライブラリは、VMテンプレート、vAppテンプレート、およびその他の種類のファイルを格納するコンテナオブジェクトです。コンテンツライブラリを使用した展開では、ネットワーク接続に依存しないシームレスなエクスペリエンスが提供されます。
+
+
+NOTE: コンテンツライブラリは、クラスタ内のすべてのホストがアクセスできるように、共有データストアに格納します。HA構成にOVAを導入する前に、OVAを格納するコンテンツライブラリを作成する必要があります。次の手順に従ってコンテンツライブラリを作成します。
+
+* 手順 *
+
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+. vSphere Clientの横の省略記号を選択し、*[Content library]*を選択します。
+. ページの右側にある*[作成]*を選択します。
+. ライブラリの名前を指定し、コンテンツライブラリを作成します。
+. 作成したコンテンツライブラリに移動します。
+. ページの右側の*[Actions]*を選択し、*[Import item]*を選択してOVAファイルをインポートします。
+

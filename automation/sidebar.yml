@@ -1,0 +1,34 @@
+---
+section: automation
+title: REST APIによる自動化
+entries:
+- title: REST APIの概要
+  url: "/automation/overview-rest-apis.html"
+- title: ONTAP tools for VMware vSphere REST APIにアクセスする方法
+  url: "/automation/how-to-access-rest-api.html"
+- title: API要求を制御する入力変数
+  url: "/automation/input-variables-control-an-api-request.html"
+- title: Swagger UIからONTAP Tools for VMware vSphere APIのリファレンスドキュメントにアクセス
+  url: "/automation/how-to-access-rest-api-doc-through-the-swagger-user-interface.html"
+- title: REST APIの使用を開始する
+  url: "/automation/get-started-with-the-rest-api.html"
+- title: ワークフロー
+  entries:
+  - title: ストレージ検出
+    url: "/automation/storage-workflow.html"
+  - title: SVMアグリゲートのマッピングの要件
+    url: "/automation/svm-workflow.html"
+  - title: vCenter Serverインスタンスを使用したオンボードストレージバックエンド（SVMまたはクラスタ）
+    url: "/automation/onboard-svm-workflow.html"
+  - title: vVolデータストアの作成
+    url: "/automation/create-vvol-workflow.html"
+  - title: vVolデータストアのマウントとアンマウント
+    url: "/automation/mount-unmount-workflow.html"
+  - title: VVolデータストアのストレージの拡張または縮小
+    url: "/automation/expand-shrink-workflow.html"
+  - title: vVolデータストアの削除
+    url: "/automation/delete-vvol-workflow.html"
+  - title: ストレージしきい値の管理
+    url: "/automation/manage-threshold-workflow.html"
+  - title: ネットワークアクセスの管理
+    url: "/automation/manage-network-workflows.html"

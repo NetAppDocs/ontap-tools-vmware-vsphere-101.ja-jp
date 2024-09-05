@@ -1,0 +1,32 @@
+---
+permalink: automation/svm-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: データストアのプロビジョニングにSVMのユーザクレデンシャルを使用するために、ONTAP tools for VMware vSphereは、データストアのPOST APIで指定されたアグリゲートにボリュームを作成します。 
+---
+= SVMアグリゲートのマッピングの要件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データストアのプロビジョニングにSVMのユーザクレデンシャルを使用するために、ONTAP tools for VMware vSphereは、データストアのPOST APIで指定されたアグリゲートにボリュームを作成します。ONTAPでは、SVMユーザクレデンシャルを使用して、マッピングされていないアグリゲートにボリュームを作成することはできません。この問題を解決するには、ここで説明するONTAP REST APIまたはCLIを使用してSVMとアグリゲートをマッピングします。
+
+ONTAP REST API：
+
+[listing]
+----
+PATCH "/api/svm/svms/f16f0935-5281-11e8-b94d-005056b46485"
+'{"aggregates":{"name":["aggr1","aggr2","aggr3"]}}'
+----
+ONTAP CLI：
+
+[listing]
+----
+sti115_vsim_ucs630f_aggr1 vserver show-aggregates
+AvailableVserver Aggregate State Size Type SnapLock
+Type
+svm_test sti115_vsim_ucs630f_aggr1
+online 10.11GB vmdisk non-snaplock
+----

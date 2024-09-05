@@ -1,0 +1,68 @@
+---
+permalink: automation/mount-unmount-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: VMware Virtual Volumes（vVol）データストアを1つ以上の追加ホストにマウントして、追加のホストにストレージアクセスを提供することができます。APIを使用してvVolデータストアをアンマウントできます。 
+---
+= vVolデータストアのマウントとアンマウント
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware Virtual Volumes（vVol）データストアを1つ以上の追加ホストにマウントして、追加のホストにストレージアクセスを提供することができます。APIを使用してvVolデータストアをアンマウントできます。
+
+vVolデータストアをマウントまたはアンマウントするには、次のAPIを使用します。APIにはx-authを渡す必要があります。このx-authは、SwaggerのAuthに追加された新しいAPIから生成できます。
+
+[listing]
+----
+/virtualization/api/v1/auth/vcenter-login
+----
+[listing]
+----
+PATCH
+/virtualization/api/v1/vcenters/{vcguid}/vvols/datastores/{moref}/hosts
+----
+vCenterからVVolデータストアMORefを取得します。
+
+リクエスト本文
+
+[listing]
+----
+{
+  "operation": "mount",
+  "morefs": [
+    "host-7044"
+  ],
+}
+----
+例：*追加ホストへのマウント
+
+追加のホストにマウントするには、次のAPIを使用します。
+
+[listing]
+----
+/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-24/hosts
+
+     Request Body
+     {
+      "operation": "mount",
+      "morefs": ["host-13"],
+     }
+----
+* 追加ホストでアンマウント
+
+
+追加のホストでアンマウントするには、次のAPIを使用します。
+
+[listing]
+----
+/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-24/hosts
+
+     Request Body
+     {
+      "operation": "unmount",
+      "morefs": ["host-13"],
+     }
+----

@@ -1,0 +1,91 @@
+---
+permalink: deploy/sizing-requirements.html 
+sidebar: sidebar 
+keywords: ONTAP tools,Storage Replication Adapter 
+summary: ONTAP tools for VMware vSphereを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件を理解しておく必要があります。 
+---
+= ONTAP Tools for VMware vSphereを導入するための前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphereを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件を理解しておく必要があります。
+
+ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vCSA）で使用できます。ONTAP Tools for VMware vSphereは、ESXiシステムを含むサポートされているvSphere Clientに導入する必要があります。
+
+* *ノードあたりのインストールパッケージのスペース要件*
++
+** シンプロビジョニング環境の場合は10GB
+** シックプロビジョニングの場合は248GB
+
+
+* *ノードあたりのホストシステムのサイジング要件*導入サイズおよびノードあたりの推奨メモリは次の表のとおりです。
+
+
+|===
+
+
+| *展開の種類* | * CPU * | *メモリ（GB）* 
+
+
+| 小（S） | 8 | 16 
+
+
+| 中（M） | 12 | 24 
+
+
+| 大（L） | 16 | 32 
+|===
+link:../deploy/config-limits.html["ONTAP tools for VMware vSphereを導入するための構成の制限"]詳細については、を参照してください。
+
+
+
+== ストレージとアプリケーションの最小要件
+
+|===
+| ストレージ、ホスト、およびアプリケーション | 最小バージョン要件 
+
+
+| ONTAP | ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース 
+
+
+| ESXiホスト | ESXi 7.0.3 
+
+
+| vCenterサーバ | vCenter 7.0U3 
+
+
+| VASA Provider | 3.0 
+
+
+| OVAアプリケーション | 10.1 
+|===
+サポートされるONTAP、vCenter Server、ESXiホスト、およびプラグインアプリケーションのバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
+
+https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool"^]
+
+
+
+== 導入に関するその他の考慮事項
+
+ONTAP toolsの導入をカスタマイズするときは、いくつかの要件を考慮する必要があります。
+
+
+
+=== アプリケーションユーザのパスワード
+
+管理者アカウントに割り当てられたパスワードです。セキュリティ上の理由から、パスワードの長さは8~30文字にすることを推奨します。パスワードには、最低1文字の上部、下部、1文字の数字、および特殊文字を使用します。
+
+
+
+=== アプライアンスのメンテナンスコンソールのクレデンシャル
+
+メンテナンスコンソールには「maint」ユーザ名を使用してアクセスする必要があります。導入時に「 maint 」ユーザのパスワードを設定できます。vCenter ServerでVMを再起動する際に使用できる[Restart guest OS]オプションを使用して、パスワードを変更できます。
+
+
+
+=== アプライアンスのネットワークプロパティ
+
+ONTAP tools for VMware vSphereの有効なDNSホスト名（非修飾）と静的IPアドレス、およびその他のネットワークパラメータを指定します。指定したIPアドレスに、導入時に選択したVLANネットワークからアクセスできる必要があります。DHCPは、ONTAP tools for VMware vSphere 10.1リリースではサポートされません。これらのパラメータはすべて、適切なインストールと操作に必要です。
