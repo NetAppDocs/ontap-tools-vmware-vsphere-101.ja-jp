@@ -1,0 +1,40 @@
+---
+permalink: release-notes/otv-9-otv10-feature-comparison.html 
+sidebar: sidebar 
+keywords: release notes, feature, comparison 
+summary: OTV 9とOTV 10の機能比較について 
+---
+= OTV 9とOTV 10の機能比較
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OTV 9からOTV 10.1への移行がお客様に適しているかどうかをご確認ください。互換性に関する最新情報については、を参照してください https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]。
+
+[cols="20%,40%,40%"]
+|===
+| 機能 | ONTAPツール9.13 | ONTAPツール10.1 
+
+
+| 主な価値提案 | 強化されたセキュリティ、コンプライアンス、自動化機能により、運用開始から運用を合理化、簡易化 | 高可用性、パフォーマンス、拡張性の制限を拡張しながら、ONTAP tools 10.xを9.xパリティに移行 
+
+
+| ONTAPリリースの認定 | ONTAP 9 .9.1からONTAP 9 .15.1へ | ONTAP 9 .12.1からONTAP 9 .14.1へ 
+
+
+| VMwareリリースのサポート | vSphere 7.x-8.x SRM 8.5-9.0 | vSphere 7.x-8.x SRM 8.7-9.0 
+
+
+| プロトコルのサポート | 従来のデータストア：NFS（v3およびv4.1）、VMFS（iSCSIおよびFCP）VVOL：iSCSI、FCP、NVMe/FC、NFS v3 | 従来のデータストア：NFS（v3およびv4.1）、VMFS（iSCSI）vVol：iSCSI、NFS v3 
+
+
+| 拡張性 | ホストとVM：300台のホスト、最大10、000台のVMデータストア：NFS×600、VMFS×最大50、VVOL×最大250：最大14K | ホストとVM：600個のホストVVol：最大140K 
+
+
+| オブザーバビリティ | パフォーマンス、容量、ホストコンプライアンスのダッシュボードVMとデータストアの動的なレポート | パフォーマンス、容量、ホストコンプライアンスに関するダッシュボードが更新されました。Dynamic VMとデータストアに関するレポートが更新されました。 
+
+
+| データ保護 | VMFS用とNFS用のSRAレプリケーションFlexVolベースのレプリケーションでvVol SCVを統合し、バックアップに相互運用可能 | iSCSI VMFSデータストアおよびNFS v3データストア用のSRAレプリケーション 
+|===

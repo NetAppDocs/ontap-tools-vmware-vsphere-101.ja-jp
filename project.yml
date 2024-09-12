@@ -11,8 +11,7 @@ sidebar:
   entries:
   - title: ONTAP Tools for VMware vSphere 10.1のドキュメント
     url: "/index.html"
-  - title: リリースノート
-    url: "/release-notes.html"
+  - section: release-notes
   - section: concepts
   - section: deploy
   - section: configure

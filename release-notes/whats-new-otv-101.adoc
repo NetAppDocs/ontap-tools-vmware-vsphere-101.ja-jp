@@ -1,0 +1,96 @@
+---
+permalink: release-notes/whats-new-otv-101.html 
+sidebar: sidebar 
+keywords: 'what"s new, release notes, otv, 10.1' 
+summary: OTV 10.1の新機能について説明します。 
+---
+= ONTAP Tools for VMware vSphere 10.1の新機能
+:allow-uri-read: 
+
+
+[role="lead"]
+ONTAP Tools for VMware vSphere 10.1の新機能について説明します。
+
+[cols="30%,70%"]
+|===
+| 更新 | 製品説明 
+
+
+ a| 
+xref:../manage/migrate-standard-virtual-machines-to-vvols-datastores.html[NFSおよびVMFSデータストアのサポート]
+ a| 
+このリリースのONTAP tools for VMware vSphereでは、VASA ProviderおよびNFS v3およびVMFSデータストアを使用したVVolデータストアのプロビジョニングがサポートされます。データストアの作成、サイズ変更、マウント、アンマウント、削除などの処理がサポートされます。iSCSIプロトコルを使用してVMFSデータストアをプロビジョニングできます。VMware管理者は、iSCSI VMFSデータストアをONTAP tools for VMware vSphere 9.xxから10.1バージョンにシームレスに導入、アップグレード、移行できます。ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.1リリースへの移行がサポートされます。
+
+
+
+ a| 
+xref:../protect/configure-storage-replication-adapter-for-san-environment.html[NFSおよびVMFSデータストア用のStorage Replication Adapter（SRA）]
+ a| 
+SRAは、VMware Site Recovery Manager（SRM）仕様ベースのディザスタリカバリ（DR）を実装します。NFSデータストアの場合、ONTAPボリュームはNFS v3プロトコルを使用してESXiホストにマウントされます。VMFSデータストアの場合、ONTAP LUNはiSCSIプロトコルを使用してESXiホストにマウントされます。
+
+ONTAP SnapMirror関係では、デスティネーションサイトのボリュームとLUNがレプリケートされます。SRAでは、VMware SRMから呼び出されるtestFailover、failover、およびreprotectコマンドが実装されます。実装の一環として、SRAは、リカバリインシデントですべてのボリュームとLUNがデスティネーションにマウント可能になり、セカンダリサイトのボリュームとLUNが読み取られてデータの不一致を回避します。
+
+
+
+ a| 
+xref:../configure/dashboard-overview.html[すべてのワークフローに対応する豊富なvCenterユーザインターフェイス（UI）統合をサポート]
+ a| 
+ONTAP tools for VMware vSphere 10.1は、ワークフロー向けのグラフィカルユーザインターフェイスを提供し、ONTAP tools for VMware vSphere 9.xxリリースと同等の機能を提供します。リモートプラグインは、次の機能をサポートしています。
+
+* xref:../manage/migrate-standard-virtual-machines-to-vvols-datastores.html[NFS、VMFS、vVolデータストアのオブザーバビリティと監視]
+* xref:../protect/configure-storage-replication-adapter-for-san-environment.html[NFSおよびVMFSデータストア向けStorage Replication Adapter]
+* xref:../configure/registration-process.html[VASA Providerの登録と登録解除]
+* xref:../configure/install-nfs-vaai-plug-in.html[VAAIフラクインノインストオル]
+* xref:../manage/collect-the-log-files.html[選択したvCenterのログバンドルダウンロード]
+
+
+
+
+ a| 
+xref:../deploy/nonha-deployment.html[簡単な展開バリアントのサポート]
+ a| 
+ONTAP Tools for VMware vSphere 10.1を迅速にオンボードし、簡単な導入オプションを使用してその機能を体験できます。簡単な導入でSnapshotベースのリカバリがサポートされます。
+
+
+
+ a| 
+xref:../configure/manager-user-interface.html[すべてのONTAP tools管理ワークフローに対応するONTAP tools Manager UI]
+ a| 
+ONTAP tools Managerを使用すると、ONTAP tools管理者は、管理対象のvCenterインスタンスやオンボードストレージバックエンドをより細かく制御できます。ONTAP Tools Managerは、次のことを支援します。
+
+* vCenterの管理- ONTAP tools for VMware vSphereにvCenterインスタンスを追加および管理します。
+* ストレージバックエンド管理- ONTAPストレージクラスタをONTAP tools for VMware vSphereに追加および管理し、オンボードされたvCenterインスタンスにグローバルにマッピングします。
+* ログバンドルのダウンロード- ONTAP Tools for VMware vSphereのログファイルを収集します。
+* 証明書管理-自己署名証明書をカスタムCA証明書に変更し、すべての証明書を更新または更新します。
+* パスワード管理- OVAアプリケーションのユーザパスワードをリセットします。
+
+
+
+
+ a| 
+xref:../manage/certificate-manage.html[証明書管理]
+ a| 
+ONTAP tools for VMware vSphereの単一インスタンスで、複数のvCenterインスタンスを管理できます。ONTAP tools for VMware vSphereを導入すると、デフォルトではすべてのvCenterインスタンスに自己署名証明書が割り当てられます。複数のvCenterインスタンスを管理していて、複数のvCenterインスタンスでVVol機能を有効にする場合は、ONTAP tools Managerインターフェイスを使用して自己署名証明書をカスタムCA証明書に変更する必要があります。同じインターフェイスを使用して、すべての証明書を更新または更新できます。
+
+
+
+ a| 
+xref:../concepts/ontap-tools-concepts-terms.html[ゼロ目標復旧時点（RPO）リカバリ]
+ a| 
+ONTAP tools for VMware vSphereのセットアップを失った場合は、ONTAPデータ管理ソフトウェアを使用してONTAP toolsのセットアップをリカバリしても、データを損失することはありません。簡単な導入オプションでは、ゼロRPOリカバリはサポートされていません。
+
+
+
+ a| 
+導入時のiSCSIプロトコルのサポート
+ a| 
+Tridentでは、永続ボリュームのプロビジョニングでNFSプロトコルとiSCSIプロトコルがサポートされています。ONTAP tools for VMware vSphereを導入する際には、iSCSIプロトコルを使用してVASAプロバイダサービスのデータを永続ボリュームに格納できます。
+
+
+
+ a| 
+ストレージとvCenterのオンボーディングでのIPv6アドレスのサポート
+ a| 
+IPv4アドレス、IPv6アドレス、またはFully Qualified Domain Name（FQDN；完全修飾ドメイン名）を使用してストレージバックエンドをオンボードできます。ストレージサービスとストレージプロキシサービスは、同じIPv4またはIPv6アドレスのオンボードクレデンシャルを使用してONTAP REST APIと通信します。データパスは、エクスポートポリシールールを使用して、IPv4アドレス、IPv6アドレス、またはFQDNでサポートされます。
+
+|===
