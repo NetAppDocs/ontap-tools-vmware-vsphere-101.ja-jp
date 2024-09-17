@@ -15,6 +15,6 @@ ONTAP Tools for VMware vSphere 10.1の新機能と拡張機能について説明
 
 新機能と拡張機能の一覧については、を参照してくださいxref:whats-new-otv-101.adoc[ONTAP Tools for VMware vSphere 10.1の新機能]。
 
-ONTAP tools for VMware vSphere 9からONTAP tools 10.1への移行が導入環境に適しているかどうかの詳細については、を参照してxref:otv-9-otv10-feature-comparison.adoc[OTV 9とOTV 10の機能比較]ください。ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースからONTAP tools 10.1への移行がサポートされます。
+ONTAP tools for VMware vSphere 9からONTAP tools 10.1への移行が導入環境に適しているかどうかの詳細については、を参照してxref:ontap-tools-9-ontap-tools-10-feature-comparison.adoc[ONTAP Tools for VMware vSphere 9とONTAP Tools for VMware vSphere 10の機能比較]ください。ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースからONTAP tools 10.1への移行がサポートされます。
 
 ONTAP tools for VMware vSphere 10.1の既知の問題および制限事項の詳細については、を参照して https://library.netapp.com/ecm/ecm_get_file/ECMLP3319071["ONTAP Tools for VMware vSphere 10.1リリースノート"^]ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。

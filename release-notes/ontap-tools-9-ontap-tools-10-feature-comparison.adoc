@@ -1,17 +1,17 @@
 ---
-permalink: release-notes/otv-9-otv10-feature-comparison.html 
+permalink: release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html 
 sidebar: sidebar 
 keywords: release notes, feature, comparison 
-summary: OTV 9とOTV 10の機能比較について 
+summary: ONTAP Tools for VMware vSphere 9とONTAP Tools for VMware vSphere 10の機能比較について説明します。 
 ---
-= OTV 9とOTV 10の機能比較
+= ONTAP Tools for VMware vSphere 9とONTAP Tools for VMware vSphere 10の機能比較
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-OTV 9からOTV 10.1への移行がお客様に適しているかどうかをご確認ください。互換性に関する最新情報については、を参照してください https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]。
+ONTAP tools for VMware vSphere 9からONTAP tools for VMware vSphere 10.1への移行が適しているかどうかをご確認ください。互換性に関する最新情報については、を参照してください https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]。
 
 [cols="20%,40%,40%"]
 |===
@@ -24,10 +24,10 @@ OTV 9からOTV 10.1への移行がお客様に適しているかどうかをご�
 | ONTAPリリースの認定 | ONTAP 9 .9.1からONTAP 9 .15.1へ | ONTAP 9 .12.1からONTAP 9 .14.1へ 
 
 
-| VMwareリリースのサポート | vSphere 7.x-8.x SRM 8.5-9.0 | vSphere 7.x-8.x SRM 8.7-9.0 
+| VMwareリリースのサポート | vSphere 7.x-8.x VMware Site Recovery Manager（SRM）8.5からVMware Live Site Recovery 9.0へ | vSphere 7.x-8.x VMware Site Recovery Manager（SRM）8.7からVMware Live Site Recovery 9.0へ 
 
 
-| プロトコルのサポート | 従来のデータストア：NFS（v3およびv4.1）、VMFS（iSCSIおよびFCP）VVOL：iSCSI、FCP、NVMe/FC、NFS v3 | 従来のデータストア：NFS（v3およびv4.1）、VMFS（iSCSI）vVol：iSCSI、NFS v3 
+| プロトコルのサポート | NFSおよびVMFSデータストア：NFS（v3およびv4.1）、VMFS（iSCSIおよびFCP）vVolデータストア：iSCSI、FCP、NVMe/FC、NFS v3 | NFSおよびVMFSデータストア：NFS（v3およびv4.1）、VMFS（iSCSI）vVolデータストア：iSCSI、NFS v3 
 
 
 | 拡張性 | ホストとVM：300台のホスト、最大10、000台のVMデータストア：NFS×600、VMFS×最大50、VVOL×最大250：最大14K | ホストとVM：600個のホストVVol：最大140K 

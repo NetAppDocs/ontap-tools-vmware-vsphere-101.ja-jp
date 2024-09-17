@@ -1,8 +1,8 @@
 ---
 permalink: release-notes/whats-new-otv-101.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, otv, 10.1' 
-summary: OTV 10.1の新機能について説明します。 
+keywords: 'what"s new, release notes, otv, 10.1, ONTAP tools for VMware vSphere' 
+summary: ONTAP Tools for VMware vSphere 10.1の新機能について説明します。 
 ---
 = ONTAP Tools for VMware vSphere 10.1の新機能
 :allow-uri-read: 

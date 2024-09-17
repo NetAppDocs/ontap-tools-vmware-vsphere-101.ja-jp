@@ -6,5 +6,5 @@ entries:
   url: "/release-notes/release-notes.html"
 - title: ONTAP Tools for VMware vSphere 10.1の新機能
   url: "/release-notes/whats-new-otv-101.html"
-- title: OTV 9とOTV 10の機能比較
-  url: "/release-notes/otv-9-otv10-feature-comparison.html"
+- title: ONTAPツール9とONTAPツール10の機能比較
+  url: "/release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html"
