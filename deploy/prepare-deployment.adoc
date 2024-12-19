@@ -52,4 +52,5 @@ ONTAP tools for VMware vSphereの導入を開始する前に、ストレージ�
 .. IPv6ゲートウェイ（オプション）
 
 
+. 非HAの高度なHA構成およびHA構成でONTAP Tools for VMware vSphere 10.1をインストールする前に、技術情報アーティクル：を確認してください https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["HAイカイノコウシントHAコウセイノシヨウケン"]。
 
