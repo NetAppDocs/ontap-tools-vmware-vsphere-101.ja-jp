@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: ONTAP Tools for VMware vSphereのドキュメント
+  title: ONTAP Tools for VMware vSphere 10.1のドキュメント
   lead: ONTAP Tools for VMware vSphereを使用すると、vCenter Server環境で仮想データストアを設定、管理、保護できます。
   tiles:
   - title: 開始する

@@ -1699,7 +1699,6 @@
   <block id="3f50e7c6b4d426580688c6da56153793" category="list-text">証明書のアップグレード</block>
   <block id="ef68cd44177b6a31df6410ebc4f7c5e1" category="list-text">プラグインのリモートアップグレード</block>
   <block id="8f7be3c874feb6ef0fd5f20afd8d5fbb" category="sidebar">ONTAP Tools for VMware vSphereを使用すると、vCenter Server環境で仮想データストアを設定、管理、保護できます。</block>
-  <block id="26ffc687a7267f96a389530199971cd1" category="sidebar">ONTAP Tools for VMware vSphereのドキュメント</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始する</block>
   <block id="da951ef1610be90b45b31baf7b25b179" category="sidebar">ONTAP Tools for VMware vSphereの詳細</block>
   <block id="2a03ee5b0887b8a6bf23fd52456544db" category="sidebar">ONTAP Tools for VMware vSphereの導入</block>
@@ -1825,4 +1824,5 @@
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAPツール9とONTAPツール10の機能比較</block>
   <block id="f6e2644fce556a8207829c90c0760e9e" category="inline-link">HAイカイノコウシントHAコウセイノシヨウケン</block>
   <block id="1194197b73e30573b06eeec54d3ca76d" category="list-text">非HAの高度なHA構成およびHA構成でONTAP Tools for VMware vSphere 10.1をインストールする前に、技術情報アーティクル：を確認してください<block ref="e4dee65de4069a83bb14c7c7d5ee3ead" category="inline-link-rx"></block>。</block>
+  <block id="a62e9d532f8887c09395a1edc29c465f" category="sidebar">ONTAP Tools for VMware vSphere 10.1のドキュメント</block>
 </blocks>
