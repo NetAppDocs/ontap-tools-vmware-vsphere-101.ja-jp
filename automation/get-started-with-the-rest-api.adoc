@@ -15,6 +15,7 @@ ONTAP Tools for VMware vSphere REST APIはすぐに使用を開始できます�
 
 
 
+[[hello-world]]
 == Hello world
 
 システムで簡単なコマンドを実行して、ONTAP tools for VMware vSphere REST APIの使用を開始し、使用可能かどうかを確認できます。

@@ -15,6 +15,7 @@ Site Recovery Manager（SRM）向けStorage Replication Adapter（SRA）を実�
 
 
 
+[[configure-sra-for-san-environments]]
 == SAN環境用のSRAの設定
 
 * 必要なもの *
@@ -46,6 +47,7 @@ https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recover
 
 
 
+[[configure-sra-for-nas-environments]]
 == NAS環境向けのSRAの設定
 
 * 必要なもの *

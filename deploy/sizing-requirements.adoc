@@ -42,6 +42,7 @@ link:../deploy/config-limits.html["ONTAP tools for VMware vSphereを導入する
 
 
 
+[[minimum-storage-and-application-requirements]]
 == ストレージとアプリケーションの最小要件
 
 |===
@@ -68,24 +69,28 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+[[additional-deployment-considerations]]
 == 導入に関するその他の考慮事項
 
 ONTAP toolsの導入をカスタマイズするときは、いくつかの要件を考慮する必要があります。
 
 
 
+[[application-user-password]]
 === アプリケーションユーザのパスワード
 
 管理者アカウントに割り当てられたパスワードです。セキュリティ上の理由から、パスワードの長さは8~30文字にすることを推奨します。パスワードには、最低1文字の上部、下部、1文字の数字、および特殊文字を使用します。
 
 
 
+[[appliance-maintenance-console-credentials]]
 === アプライアンスのメンテナンスコンソールのクレデンシャル
 
 メンテナンスコンソールには「maint」ユーザ名を使用してアクセスする必要があります。導入時に「 maint 」ユーザのパスワードを設定できます。vCenter ServerでVMを再起動する際に使用できる[Restart guest OS]オプションを使用して、パスワードを変更できます。
 
 
 
+[[appliance-network-properties]]
 === アプライアンスのネットワークプロパティ
 
 ONTAP tools for VMware vSphereの有効なDNSホスト名（非修飾）と静的IPアドレス、およびその他のネットワークパラメータを指定します。指定したIPアドレスに、導入時に選択したVLANネットワークからアクセスできる必要があります。DHCPは、ONTAP tools for VMware vSphere 10.1リリースではサポートされません。これらのパラメータはすべて、適切なインストールと操作に必要です。

@@ -22,6 +22,7 @@ NOTE: vSphere Client UIを使用してストレージバックエンドを追加
 
 
 
+[[add-storage-backend-using-ontap-tools-manager]]
 == ONTAP tools Managerを使用したストレージバックエンドの追加
 
 
@@ -42,6 +43,7 @@ NOTE: IPv4とIPv6の管理LIFがサポートされます。管理LIFを使用す
 
 
 
+[[add-storage-backend-using-vsphere-client-ui]]
 == vSphere Client UIを使用してストレージバックエンドを追加します。
 
 . 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`

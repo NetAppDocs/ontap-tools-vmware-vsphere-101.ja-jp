@@ -15,6 +15,7 @@ ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージ�
 
 
 
+[[ontap-storage-views-for-nfs-datastores]]
 == NFSデータストア用のONTAPストレージビュー
 
 .手順
@@ -30,6 +31,7 @@ ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージ�
 
 
 
+[[ontap-storage-views-for-vmfs-datastores]]
 == VMFSデータストア用のONTAPストレージビュー
 
 .手順
@@ -45,6 +47,7 @@ ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージ�
 
 
 
+[[ontap-storage-views-for-vvols-datastores]]
 == vVolデータストアのONTAPストレージビュー
 
 .手順

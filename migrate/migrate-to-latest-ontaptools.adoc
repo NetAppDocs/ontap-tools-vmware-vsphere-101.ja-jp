@@ -25,6 +25,7 @@ NOTE: 既存のユーザは、パッチリリースにアップグレードす�
 
 
 
+[[common-migration-steps]]
 == 一般的な移行手順
 
 . ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。
@@ -35,6 +36,7 @@ NOTE: 既存のユーザは、パッチリリースにアップグレードす�
 
 
 
+[[sra-migration-steps]]
 == SRAの移行手順
 
 * 始める前に *
@@ -61,6 +63,7 @@ NOTE: フェイルオーバーが完了して再保護が保留になってい�
 
 
 
+[[vasa-provider-migration-steps]]
 == VASA Providerの移行手順
 
 . 既存のONTAP tools for VMware vSphereでDerbyポート1527を有効にします。ポートを有効にするには、rootユーザでCLIにログインし、次のコマンドを実行します。

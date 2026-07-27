@@ -15,6 +15,7 @@ vCenter Serverのアクセス許可を使用する場合は、いくつかの重
 
 
 
+[[assigning-permissions]]
 == 権限の割り当て
 
 vCenter Serverのアクセス許可は、vSphereのオブジェクトおよびタスクへのアクセスを制限する場合にのみ設定します。それ以外の場合は、管理者としてログインできます。このログインにより、すべてのvSphereオブジェクトに自動的にアクセスできるようになります。
@@ -30,6 +31,7 @@ TIP: 会社のセキュリティポリシーでアクセス許可の制限が厳
 
 
 
+[[permissions-and-non-vsphere-objects]]
 == アクセス許可と非vSphereオブジェクト
 
 作成したアクセス許可はvSphere以外のオブジェクトに適用されます。たとえば、ストレージシステムはvSphereオブジェクトではありません。ストレージシステムの環境権限がある場合は、tools for VMware vSphereルートオブジェクトに割り当てることができるvSphereオブジェクトがないため、その権限を含むアクセス許可をONTAP tools for VMware vSphereルートオブジェクトに割り当てる必要があります。
@@ -38,6 +40,7 @@ TIP: 会社のセキュリティポリシーでアクセス許可の制限が厳
 
 
 
+[[modifying-permissions]]
 == アクセス許可の変更
 
 変更できる権限は一度に1つです。

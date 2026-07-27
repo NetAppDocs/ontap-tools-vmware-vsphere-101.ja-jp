@@ -15,6 +15,7 @@ ONTAP REST API には、いくつかの方法でアクセスできます。
 
 
 
+[[network-considerations]]
 == ネットワークに関する考慮事項
 
 REST API には、次のインターフェイスを通じて接続できます。
@@ -31,6 +32,7 @@ NOTE: 必ずクラスタ管理LIFを使用してください。これにより�
 
 
 
+[[ontap-tools-for-vmware-vsphere-api-online-documentation-page]]
 == ONTAP Tools for VMware vSphere APIオンラインドキュメントページ
 
 Swaggerには、NetApp ONTAP tools for VMware vSphereプラグインのサポートページにあるハイパーリンクからアクセスできます。
@@ -41,6 +43,7 @@ Swaggerには、NetApp ONTAP tools for VMware vSphereプラグインのサポー
 
 
 
+[[custom-software-and-tools]]
 == カスタムのソフトウェアとツール
 
 ONTAP Tools for VMware vSphere APIには、さまざまなプログラミング言語やツールを使用してアクセスできます。代表的なものとしては、 Python 、 Java 、 Curl 、 PowerShell などがあります。API を使用するプログラム、スクリプト、またはツールは、 REST Web サービスのクライアントとして機能します。プログラミング言語を使用すると、APIについての理解が深まり、ONTAP Tools for VMware vSphereの管理を自動化することができます。

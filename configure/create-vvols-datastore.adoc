@@ -17,6 +17,7 @@ summary: vVolデータストアは、新しいボリュームまたは既存の�
 
 
 
+[[create-a-vvols-datastore]]
 == vVolデータストアを作成する
 
 vVolデータストアは、新しいボリュームまたは既存のボリュームを使用して作成できます。既存のボリュームと新しいボリュームが混在しているvVolデータストアを作成することはできません。
@@ -45,6 +46,7 @@ NOTE: ルートアグリゲートがSVMにマッピングされていないこ�
 
 
 
+[[create-an-nfs-datastore]]
 == NFSデータストアを作成する
 
 VMware Network File System（NFS）データストアは、NFSプロトコルを使用して、ESXiホストをネットワーク経由で共有ストレージデバイスに接続します。NFSデータストアはVMware vSphere環境で一般的に使用され、シンプルさや柔軟性など、いくつかの利点があります。
@@ -72,6 +74,7 @@ NFSデータストアが作成され、すべてのホストにマウントさ�
 
 
 
+[[create-a-vmfs-datastore]]
 == VMFSデータストアの作成
 
 Virtual Machine File System（VMFS）は、VMware vSphere環境に仮想マシンファイルを格納するために特別に設計されたクラスタファイルシステムです。複数のESXiホストが同じ仮想マシンファイルに同時にアクセスできるため、vMotionや高可用性などの機能が有効になります。

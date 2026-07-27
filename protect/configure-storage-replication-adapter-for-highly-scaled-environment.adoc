@@ -15,6 +15,7 @@ summary: 大規模な環境で最適なパフォーマンスを実現するに�
 
 
 
+[[storage-provider-settings]]
 == ストレージプロバイダの設定
 
 大規模な環境では、SRMで次のタイムアウト値を設定する必要があります。
@@ -60,6 +61,7 @@ https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GU
 
 
 
+[[storage-settings]]
 == ストレージ設定
 
 タイムアウトになった場合は `storage.commandTimeout`、との値を大きくして `storage.maxConcurrentCommandCnt`大きい値にします。

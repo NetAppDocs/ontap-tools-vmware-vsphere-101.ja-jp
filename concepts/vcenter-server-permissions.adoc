@@ -36,6 +36,7 @@ image:../media/permission-updated-graphic.gif["権限コンポーネントの図
 
 
 
+[[privileges]]
 == 権限
 
 ONTAP Tools for VMware vSphereには、次の2種類のPrivilegesが関連付けられています。
@@ -59,12 +60,14 @@ NOTE: vCenter Server RBACの使用を簡易化するために、ONTAP tools for 
 
 
 
+[[vsphere-objects]]
 == vSphereオブジェクト
 
 アクセス許可はvSphereオブジェクトに関連付けられます。vCenter Server、ESXiホスト、仮想マシン、データストア、データセンター、フォルダなどがあります。任意のvSphereオブジェクトに権限を割り当てることができます。vSphereオブジェクトに割り当てられたアクセス許可に基づいて、そのオブジェクトに対してどのユーザがどのタスクを実行できるかがvCenter Serverによって決まります。ONTAP tools for VMware vSphere固有のタスクの場合、アクセス許可の割り当てと検証はルートフォルダレベル（vCenter Server）でのみ行われ、他のエンティティでは行われません。ただしVAAIプラグインの処理は例外で、該当するESXiホストに対して権限が検証されます。
 
 
 
+[[users-and-groups]]
 == ユーザとグループ
 
 ユーザとグループは、Active Directory（またはローカルのvCenter Serverマシン）を使用して設定できます。その後、vCenter Serverアクセス許可を使用してこれらのユーザまたはグループにアクセスを許可し、特定のONTAP Tools for VMware vSphereタスクを実行できるようにします。

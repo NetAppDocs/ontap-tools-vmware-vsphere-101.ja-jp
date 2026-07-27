@@ -17,6 +17,7 @@ ESXiホストで設定できる値は次のとおりです。
 
 
 
+[[hbacna-adapter-settings]]
 == HBA / CNAアダプタ設定
 
 NetAppストレージシステムに推奨されるHBAタイムアウト設定を設定します。
@@ -41,6 +42,7 @@ NetAppストレージシステムに推奨されるHBAタイムアウト設定�
 
 
 
+[[mpio-settings]]
 == MPIO設定
 
 MPIO設定では、NetAppストレージシステムの優先パスを定義します。MPIOの設定によって、（インターコネクトケーブルを経由する最適化されていないパスではなく）最適化されたパスが決まり、そのうちの1つに優先パスが設定されます。
@@ -49,6 +51,7 @@ MPIO設定では、NetAppストレージシステムの優先パスを定義し�
 
 
 
+[[nfs-settings]]
 == NFS 設定
 
 * * Net.TcpipHeHeapSize *

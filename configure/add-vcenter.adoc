@@ -15,6 +15,7 @@ vCenter Serverは、ホスト、仮想マシン（VM）、およびストレー�
 
 
 
+[[add-a-vcenter-server-instance]]
 == vCenter Serverインスタンスを追加する
 
 * このタスクについて *
@@ -38,6 +39,7 @@ vCenter ServerインスタンスをONTAP toolsに追加すると、次の処理�
 
 
 
+[[register-ontap-tools-for-vmware-vsphere-plug-in-with-vcenter-server-instance]]
 == ONTAP Tools for VMware vSphereプラグインをvCenter Serverインスタンスに登録
 
 vCenter Serverインスタンスを追加すると、ONTAP tools for VMware vSphereプラグインがリモートプラグインとしてvCenter Serverに自動的に登録されます。プラグインは、vSphereユーザインターフェイスのショートカットに表示されます。
@@ -46,6 +48,7 @@ vCenter Serverインスタンスを追加すると、ONTAP tools for VMware vSph
 
 
 
+[[unregister-ontap-tools-for-vmware-vsphere-plug-in]]
 == ONTAP Tools for VMware vSphereプラグインの登録解除
 
 vCenter ServerインスタンスからONTAP tools for VMware vSphere Plug-inの登録を解除するには、次の手順を実行します。
